@@ -4,7 +4,7 @@ Welcome to the repository for my personal portfolio website! This project showca
 
 ## 🚀 Live Demo
 
-*(Add your Vercel deployment link here once deployed, e.g., `https://your-portfolio.vercel.app`)*
+https://portfolio-delta-swart-58.vercel.app/
 
 ## 🛠️ Built With
 
@@ -19,27 +19,7 @@ Welcome to the repository for my personal portfolio website! This project showca
 * **Projects Showcase:** Highlights my recent work including Sentinel AI, Decentralized Edge AI, and more.
 * **Achievements Timeline:** A visual representation of my educational background and awards.
 
-## 💻 Getting Started Locally
 
-To run this project on your local machine, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/JAYASURYA-KK/portfolio.git
-   ```
-2. **Navigate to the directory:**
-   ```bash
-   cd portfolio
-   ```
-3. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-4. **Start the development server:**
-   ```bash
-   npm start
-   ```
-   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## 📫 Contact
 
