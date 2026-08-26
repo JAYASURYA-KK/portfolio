@@ -37,19 +37,19 @@ const Education = () => {
           <h3 className="column-title">Achievements</h3>
           <div className="timeline">
             <div className="timeline-item glass-panel achievement-item">
-              <div className="achievement-icon">🏆</div>
+
               <h4>2nd Prize in Ideathon</h4>
               <p>Secured 2nd prize for <strong>Sentinel AI</strong>, an innovative cybersecurity-related project.</p>
             </div>
             
             <div className="timeline-item glass-panel achievement-item">
-              <div className="achievement-icon">🏆</div>
+
               <h4>2nd Prize in Hackathon</h4>
               <p>Tamil Club Hackathon conducted by Kongu Engineering College.</p>
             </div>
             
             <div className="timeline-item glass-panel achievement-item">
-              <div className="achievement-icon">⭐</div>
+
               <h4>Merit Scholarship Award</h4>
               <p>Awarded by Kongu Vellalar Institute of Technology Trust for excellent academic performance during the 2024-25 academic year.</p>
             </div>
