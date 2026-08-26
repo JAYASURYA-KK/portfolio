@@ -2,7 +2,7 @@ import React from 'react';
 import './HeroSection.css';
 import profileImage from '../assets/profile.jpg';
 
-const HeroSection = () => {
+const HeroSection = ({ onOpenResume }) => {
   return (
     <section id="home" className="section hero-section">
       <div className="hero-content">
@@ -19,11 +19,14 @@ const HeroSection = () => {
 
           <div className="cta-buttons">
             <a href="#projects" className="btn btn-primary">View Projects</a>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn btn-secondary">Resume</a>
-            <a href="mailto:jayasurya272007@gmail.com" className="btn btn-secondary">Contact Me</a>
+            <button onClick={onOpenResume} className="btn btn-secondary">Resume</button>
+            <a href="#contact" className="btn btn-secondary">Contact Me</a>
           </div>
 
           <div className="social-links">
+            <a href="mailto:jayasurya272007@gmail.com" className="social-icon">
+              <img src="/icons/gmail-svgrepo-com.svg" alt="Gmail" />
+            </a>
             <a href="https://github.com/JAYASURYA-KK" target="_blank" rel="noreferrer" className="social-icon">
               <img src="/icons/github.svg" alt="GitHub" />
             </a>

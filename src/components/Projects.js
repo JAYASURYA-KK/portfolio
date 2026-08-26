@@ -4,6 +4,14 @@ import './Projects.css';
 const Projects = () => {
   const projectList = [
     {
+      title: "Sentinel AI",
+      tech: ["Flutter", "React", "AI"],
+      desc: "A privacy-first, offline Endpoint Detection & Response (EDR) system. Features a local AI-powered Flutter desktop app for real-time threat neutralization and a modern React landing page.",
+      link: "",
+      github: "https://github.com/JAYASURYA-KK/sentinel_ai",
+      image: "/screenshots/sentinel_ai.png"
+    },
+    {
       title: "Decentralized Edge AI for Urban Mobility",
       tech: ["Browser-native Edge AI", "ONNX", "React"],
       desc: "DRACO 2.0 — Browser-native Edge AI for real-time urban traffic prediction. ML inference runs entirely in-browser via ONNX without a backend. Features a React dashboard with 13 modules, reporting, and offline support.",
@@ -37,7 +45,7 @@ const Projects = () => {
     },
     {
       title: "Railway Reservation System",
-      tech: ["Java", "SQL"],
+      tech: ["HTML", "PHP", "MySQL"],
       desc: "Railway reservation management system featuring normalized database design, ER diagrams, and SQL-based booking operations to ensure efficient passenger management.",
       link: "https://railway-reservation-system-rho7.onrender.com/",
       github: "https://github.com/JAYASURYA-KK/Railway_Reservation_System",

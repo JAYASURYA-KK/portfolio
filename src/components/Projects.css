@@ -61,7 +61,7 @@
 .project-title {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .project-tech {
@@ -97,7 +97,7 @@
 }
 
 .project-link {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.9rem;
   font-weight: 600;
   display: flex;
