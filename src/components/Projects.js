@@ -7,7 +7,7 @@ const Projects = () => {
       title: "Sentinel AI",
       tech: ["Flutter", "React", "AI"],
       desc: "A privacy-first, offline Endpoint Detection & Response (EDR) system. Features a local AI-powered Flutter desktop app for real-time threat neutralization and a modern React landing page.",
-      link: "",
+      link: "https://sentinel-ai-lemon-five.vercel.app/",
       github: "https://github.com/JAYASURYA-KK/sentinel_ai",
       image: "/screenshots/sentinel_ai.png"
     },
