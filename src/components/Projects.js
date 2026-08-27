@@ -4,6 +4,14 @@ import './Projects.css';
 const Projects = () => {
   const projectList = [
     {
+      title: "EdgePredict AI",
+      tech: ["React", "ONNX", "Blender", "3D Modeling"],
+      desc: "An AI-powered web application utilizing ONNX for edge inference and React for the frontend interface. Features an integrated 3D model that was adapted and optimized using Blender to enhance data visualization.",
+      link: "https://edge-predict-ai-flax.vercel.app/",
+      github: "https://github.com/JAYASURYA-KK/EdgePredict-AI",
+      image: "/screenshots/EdgePredict AI.png"
+    },
+    {
       title: "Sentinel AI",
       tech: ["Flutter", "React", "AI"],
       desc: "A privacy-first, offline Endpoint Detection & Response (EDR) system. Features a local AI-powered Flutter desktop app for real-time threat neutralization and a modern React landing page.",
