@@ -3,7 +3,7 @@ import * as pdfjsLib from 'pdfjs-dist';
 import './ResumeModal.css';
 
 // Use local worker file in public/
-const WORKER_LOCAL = `${process.env.PUBLIC_URL || ''}/pdf.worker.min.js`;
+const WORKER_LOCAL = `${process.env.PUBLIC_URL || ''}/pdf.worker.min.mjs`;
 pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER_LOCAL;
 
 const ResumeModal = ({ isOpen, onClose }) => {
