@@ -4,7 +4,7 @@ Welcome to the repository for my personal portfolio website! This project showca
 
 ## 🚀 Live Demo
 
-https://portfolio-delta-swart-58.vercel.app/
+https://jayasuryak.vercel.app/
 
 ## 🛠️ Built With
 
