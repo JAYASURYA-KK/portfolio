@@ -24,5 +24,5 @@ https://jayasuryak.vercel.app/
 ## 📫 Contact
 
 * **Email:** jayasurya272007@gmail.com
-* **LinkedIn:** [jayasurya2707](https://linkedin.com/in/jayasurya2707)
+* **LinkedIn:** [jayasurya272007](https://www.linkedin.com/in/jayasurya272007/)
 * **GitHub:** [JAYASURYA-KK](https://github.com/JAYASURYA-KK)

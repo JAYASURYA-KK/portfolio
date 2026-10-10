@@ -30,7 +30,7 @@ const HeroSection = ({ onOpenResume }) => {
             <a href="https://github.com/JAYASURYA-KK" target="_blank" rel="noreferrer" className="social-icon">
               <img src="/icons/github.svg" alt="GitHub" />
             </a>
-            <a href="https://linkedin.com/in/jayasurya2707" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://www.linkedin.com/in/jayasurya272007/" target="_blank" rel="noreferrer" className="social-icon">
               <img src="/icons/linkedin.svg" alt="LinkedIn" />
             </a>
             <a href="https://leetcode.com/u/jaya_surya_2007" target="_blank" rel="noreferrer" className="social-icon">
