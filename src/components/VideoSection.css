@@ -1,0 +1,316 @@
+.video-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.video-section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-top: -1.5rem;
+  margin-bottom: 3rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-section-subtitle strong {
+  color: var(--accent-cyan);
+}
+
+.video-container-card {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transition: var(--transition);
+}
+
+.video-container-card:hover {
+  border-color: rgba(0, 210, 255, 0.35);
+  box-shadow: 0 15px 50px rgba(0, 210, 255, 0.15), 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Video Player Wrapper */
+.video-player-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000000;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+}
+
+/* Thumbnail and Play Overlay */
+.video-thumbnail-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.3s ease;
+}
+
+.video-thumbnail-container:hover .video-thumbnail {
+  transform: scale(1.05);
+  filter: brightness(0.85);
+}
+
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease;
+}
+
+.video-thumbnail-container:hover .video-play-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.play-btn-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f61c0d, #ff5722);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(246, 28, 13, 0.65), 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.video-thumbnail-container:hover .play-btn-circle {
+  transform: scale(1.15);
+  box-shadow: 0 0 35px rgba(246, 28, 13, 0.9), 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.play-triangle {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px;
+  color: #ffffff;
+}
+
+.play-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.5px;
+}
+
+.video-duration-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Iframe player */
+.video-iframe-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.video-close-btn:hover {
+  background: rgba(255, 50, 50, 0.85);
+  border-color: #ff3333;
+}
+
+/* Video Info Content */
+.video-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.video-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.youtube-badge {
+  background: rgba(246, 28, 13, 0.15);
+  color: #ff5247;
+  border: 1px solid rgba(246, 28, 13, 0.35);
+}
+
+.tech-badge {
+  background: rgba(0, 210, 255, 0.12);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 210, 255, 0.25);
+}
+
+.badge-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.video-title {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.video-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.video-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.video-highlights li {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.highlight-bullet {
+  color: var(--accent-cyan);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.video-highlights strong {
+  color: var(--text-primary);
+}
+
+.video-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.video-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #f61c0d, #ff5722);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(246, 28, 13, 0.4);
+}
+
+.video-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(246, 28, 13, 0.6);
+}
+
+.video-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.4rem;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .video-container-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.8rem;
+  }
+
+  .video-title {
+    font-size: 1.35rem;
+  }
+
+  .video-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .video-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

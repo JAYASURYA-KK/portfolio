@@ -42,6 +42,7 @@ const Navbar = ({ onOpenResume }) => {
           <li><a href="#home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
           <li><a href="#skills" onClick={() => setIsMobileMenuOpen(false)}>Skills</a></li>
           <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</a></li>
+          <li><a href="#video" onClick={() => setIsMobileMenuOpen(false)}>Video</a></li>
           <li><a href="#education" onClick={() => setIsMobileMenuOpen(false)}>Education</a></li>
           <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
           <li><button className="nav-resume-btn" onClick={() => { setIsMobileMenuOpen(false); onOpenResume(); }}>Resume</button></li>

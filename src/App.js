@@ -4,24 +4,27 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import VideoSection from './components/VideoSection';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import ResumeModal from './components/ResumeModal';
 
 function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
+  const [selectedSkill, setSelectedSkill] = useState(null);
 
   return (
     <div className="App">
       <Navbar onOpenResume={() => setIsResumeOpen(true)} />
       <HeroSection onOpenResume={() => setIsResumeOpen(true)} />
-      <Skills />
-      <Projects />
+      <Skills selectedSkill={selectedSkill} onSelectSkill={setSelectedSkill} />
+      <Projects selectedSkill={selectedSkill} onSelectSkill={setSelectedSkill} />
+      <VideoSection />
       <Education />
       <Contact />
-      
+
       <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />
-      
+
       <footer className="footer">
         <p>© 2026 Jayasurya K. All rights reserved.</p>
         <p>jayasurya272007@gmail.com | +91 9080418085</p>

@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('./components/ResumeModal', () => () => <div data-testid="mock-resume-modal" />);
+
+test('renders portfolio title and developer name', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const nameElements = screen.getAllByText(/Jayasurya K/i);
+  expect(nameElements.length).toBeGreaterThan(0);
 });

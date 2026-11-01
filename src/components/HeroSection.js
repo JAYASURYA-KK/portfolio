@@ -24,17 +24,20 @@ const HeroSection = ({ onOpenResume }) => {
           </div>
 
           <div className="social-links">
-            <a href="mailto:jayasurya272007@gmail.com" className="social-icon">
+            <a href="mailto:jayasurya272007@gmail.com" className="social-icon" title="Email">
               <img src="/icons/gmail-svgrepo-com.svg" alt="Gmail" />
             </a>
-            <a href="https://github.com/JAYASURYA-KK" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://github.com/JAYASURYA-KK" target="_blank" rel="noreferrer" className="social-icon" title="GitHub">
               <img src="/icons/github.svg" alt="GitHub" />
             </a>
-            <a href="https://www.linkedin.com/in/jayasurya272007/" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://www.linkedin.com/in/jayasurya272007/" target="_blank" rel="noreferrer" className="social-icon" title="LinkedIn">
               <img src="/icons/linkedin.svg" alt="LinkedIn" />
             </a>
-            <a href="https://leetcode.com/u/jaya_surya_2007" target="_blank" rel="noreferrer" className="social-icon">
+            <a href="https://leetcode.com/u/jaya_surya_2007" target="_blank" rel="noreferrer" className="social-icon" title="LeetCode">
               <img src="/icons/leetcode.svg" alt="LeetCode" />
+            </a>
+            <a href="https://www.youtube.com/@JAYASURYA-KK" target="_blank" rel="noreferrer" className="social-icon" title="YouTube">
+              <img src="/icons/youtube.svg" alt="YouTube" />
             </a>
           </div>
         </div>
