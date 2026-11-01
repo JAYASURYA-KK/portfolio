@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projects.css';
 
-const Projects = ({ selectedSkill, onSelectSkill }) => {
+const Projects = () => {
   const projectList = [
     {
       title: "Smart Safety Monitor",
@@ -69,149 +69,38 @@ const Projects = ({ selectedSkill, onSelectSkill }) => {
     }
   ];
 
-  const isProjectMatchingSkill = (project, skill) => {
-    if (!skill) return false;
-    const s = skill.trim().toLowerCase();
-
-    // Specific matching logic
-    if (s.includes('firebase')) {
-      return project.tech.some(t => t.toLowerCase().includes('firebase')) || project.desc.toLowerCase().includes('firebase');
-    }
-    if (s === 'js' || s === 'javascript') {
-      return project.tech.some(t => t.toLowerCase() === 'js' || t.toLowerCase() === 'javascript');
-    }
-    if (s === 'node.js' || s === 'node') {
-      return project.tech.some(t => t.toLowerCase().includes('node')) || project.desc.toLowerCase().includes('node');
-    }
-    if (s === 'html') {
-      return project.tech.some(t => t.toLowerCase() === 'html');
-    }
-    if (s === 'css') {
-      return project.tech.some(t => t.toLowerCase() === 'css');
-    }
-    if (s === 'c++') {
-      return project.tech.some(t => t.toLowerCase() === 'c++');
-    }
-    if (s === 'c') {
-      return project.tech.some(t => t.toLowerCase() === 'c');
-    }
-    if (s === 'java') {
-      return project.tech.some(t => t.toLowerCase() === 'java');
-    }
-    if (s === 'react') {
-      return project.tech.some(t => t.toLowerCase().includes('react'));
-    }
-    if (s === 'python') {
-      return project.tech.some(t => t.toLowerCase().includes('python'));
-    }
-    if (s === 'mysql') {
-      return project.tech.some(t => t.toLowerCase().includes('mysql'));
-    }
-    if (s === 'mongodb') {
-      return project.tech.some(t => t.toLowerCase().includes('mongodb'));
-    }
-    if (s === 'postgresql') {
-      return project.tech.some(t => t.toLowerCase().includes('postgres'));
-    }
-    if (s === 'power bi') {
-      return project.tech.some(t => t.toLowerCase().includes('power bi'));
-    }
-    if (s === 'numpy' || s === 'pandas' || s === 'matplotlib') {
-      return project.tech.some(t => t.toLowerCase().includes(s)) || project.desc.toLowerCase().includes(s) || project.tech.some(t => t.toLowerCase().includes('machine learning') || t.toLowerCase().includes('python'));
-    }
-
-    return project.tech.some(t => t.toLowerCase().includes(s)) || project.desc.toLowerCase().includes(s);
-  };
-
-  const isTagMatchingSkill = (tag, skill) => {
-    if (!skill) return false;
-    const s = skill.trim().toLowerCase();
-    const t = tag.trim().toLowerCase();
-    if (s.includes('firebase') && t.includes('firebase')) return true;
-    if ((s === 'javascript' || s === 'js') && (t === 'javascript' || t === 'js')) return true;
-    if (s === t) return true;
-    return t.includes(s) || s.includes(t);
-  };
-
-  const matchingCount = selectedSkill 
-    ? projectList.filter(p => isProjectMatchingSkill(p, selectedSkill)).length 
-    : 0;
-
   return (
     <section id="projects" className="section">
       <h2 className="section-title">Featured Projects</h2>
-
-      {selectedSkill && (
-        <div className="filter-status-banner glass-panel">
-          <div className="filter-status-info">
-            <span className="filter-sparkle">✨</span>
-            <span>
-              Highlighting projects using <strong>{selectedSkill}</strong> ({matchingCount} {matchingCount === 1 ? 'project' : 'projects'} found)
-            </span>
-          </div>
-          <button 
-            type="button" 
-            className="clear-filter-btn" 
-            onClick={() => onSelectSkill && onSelectSkill(null)}
-          >
-            ✕ Clear Highlight
-          </button>
-        </div>
-      )}
-
       <div className="projects-grid">
-        {projectList.map((project, index) => {
-          const isHighlighted = selectedSkill && isProjectMatchingSkill(project, selectedSkill);
-          const isDimmed = selectedSkill && !isHighlighted;
-
-          return (
-            <div 
-              key={index} 
-              className={`glass-panel project-card ${isHighlighted ? 'highlighted-project' : ''} ${isDimmed ? 'dimmed-project' : ''}`}
-            >
-              {isHighlighted && (
-                <div className="match-badge">
-                  <span>★</span> Uses {selectedSkill}
-                </div>
-              )}
-
-              {project.image && (
-                <div className="project-image-container">
-                  <img src={project.image} alt={project.title} className="project-image" />
-                </div>
-              )}
-              <h3 className="project-title">{project.title}</h3>
-              <div className="project-tech">
-                {project.tech.map((t, i) => {
-                  const tagMatches = isTagMatchingSkill(t, selectedSkill);
-                  return (
-                    <span 
-                      key={i} 
-                      className={`tech-tag ${tagMatches ? 'active-tag' : ''}`}
-                      onClick={() => onSelectSkill && onSelectSkill(selectedSkill === t ? null : t)}
-                      title={`Filter by ${t}`}
-                    >
-                      {t}
-                    </span>
-                  );
-                })}
+        {projectList.map((project, index) => (
+          <div key={index} className="glass-panel project-card">
+            {project.image && (
+              <div className="project-image-container">
+                <img src={project.image} alt={project.title} className="project-image" />
               </div>
-              <p className="project-desc">{project.desc}</p>
-              <div className="project-links">
-                {project.link && (
-                  <a href={project.link} target="_blank" rel="noreferrer" className="project-link demo-link">
-                    {project.link.includes('youtu') ? 'Live Demo (Video)' : 'Live Demo'} <span>↗</span>
-                  </a>
-                )}
-                {project.github && (
-                  <a href={project.github} target="_blank" rel="noreferrer" className="project-link github-link">
-                    GitHub <span>↗</span>
-                  </a>
-                )}
-              </div>
+            )}
+            <h3 className="project-title">{project.title}</h3>
+            <div className="project-tech">
+              {project.tech.map((t, i) => (
+                <span key={i} className="tech-tag">{t}</span>
+              ))}
             </div>
-          );
-        })}
+            <p className="project-desc">{project.desc}</p>
+            <div className="project-links">
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noreferrer" className="project-link demo-link">
+                  {project.link.includes('youtu') ? 'Live Demo (Video)' : 'Live Demo'} <span>↗</span>
+                </a>
+              )}
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noreferrer" className="project-link github-link">
+                  GitHub <span>↗</span>
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -7,18 +7,6 @@
   width: 100%;
 }
 
-.skills-hint {
-  text-align: center;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-top: -1.5rem;
-  margin-bottom: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
 .skill-category {
   padding: 2rem;
   transition: var(--transition);
@@ -45,18 +33,15 @@
 }
 
 .skill-chip {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.08);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
-  font-family: inherit;
   color: var(--text-secondary);
   transition: var(--transition);
   border: 1px solid transparent;
-  cursor: pointer;
-  outline: none;
 }
 
 .skill-icon {
@@ -67,22 +52,8 @@
 }
 
 .skill-chip:hover {
-  background: rgba(0, 210, 255, 0.12);
+  background: rgba(0, 210, 255, 0.1);
   color: var(--accent-cyan);
   border-color: var(--accent-cyan);
-  transform: translateY(-2px) scale(1.03);
-}
-
-.skill-chip.active {
-  background: rgba(0, 210, 255, 0.22);
-  color: #ffffff;
-  border-color: var(--accent-cyan);
-  box-shadow: 0 0 15px rgba(0, 210, 255, 0.45);
-  transform: translateY(-2px) scale(1.05);
-}
-
-.active-dot {
-  margin-left: 6px;
-  font-size: 0.7rem;
-  color: var(--accent-cyan);
+  transform: scale(1.05);
 }

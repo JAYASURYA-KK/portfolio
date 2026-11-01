@@ -11,14 +11,13 @@ import ResumeModal from './components/ResumeModal';
 
 function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
-  const [selectedSkill, setSelectedSkill] = useState(null);
 
   return (
     <div className="App">
       <Navbar onOpenResume={() => setIsResumeOpen(true)} />
       <HeroSection onOpenResume={() => setIsResumeOpen(true)} />
-      <Skills selectedSkill={selectedSkill} onSelectSkill={setSelectedSkill} />
-      <Projects selectedSkill={selectedSkill} onSelectSkill={setSelectedSkill} />
+      <Skills />
+      <Projects />
       <VideoSection />
       <Education />
       <Contact />
